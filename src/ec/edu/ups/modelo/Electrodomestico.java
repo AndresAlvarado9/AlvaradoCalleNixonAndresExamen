@@ -18,6 +18,7 @@ public abstract class Electrodomestico {
     int peso;
 
     public Electrodomestico() {
+        
     }
 
     public Electrodomestico(int codigo, String descripcion, double precioBase, String color, String consumoElectrico, int peso) {
@@ -86,6 +87,20 @@ public abstract class Electrodomestico {
     @Override
     public String toString() {
         return "Electrodomestico{" + "codigo=" + codigo + ", descripcion=" + descripcion + ", precioBase=" + precioBase + ", color=" + color + ", consumoElectrico=" + consumoElectrico + ", peso=" + peso + '}';
+    }
+    public int compareTo(Object obj){
+    int resul = 0;
+    Electrodomestico electro = (Electrodomestico)obj;
+    if(this.calcularPrecio()==electro.calcularPrecio()){
+    return resul;
+    }
+    if(this.calcularPrecio()==electro.calcularPrecio()){
+    resul= 1;
+    }else{
+    
+    resul=1;
+    }
+    return resul;
     }
     
 }

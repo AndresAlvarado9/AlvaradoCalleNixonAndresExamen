@@ -25,18 +25,21 @@ public class Principal {
     private static Lavadora lava = new Lavadora();
     public static void main(String[] args) {
         System.out.println("Tienda de Electrodomesticos");
-        
+        for (int i = 0; i < 3; i++) {
         System.out.println("Ingrese la informacion de la television");
-        controlador.registrarTelevision();
-        
-        controlador.registrarLavadora();
-            System.out.println("Ingrese la informacion de la lavadora");
-        
+        controlador.registrarTelevision();    
+        }
+        for (int i = 0; i < 3; i++) {
+         System.out.println("Ingrese la informacion de la lavadora"); 
+         controlador.registrarLavadora();
+              
+        }
         System.out.println("Hay los siguientes articulos:");
         System.out.println("Televisiones");
         controlador.verTelevisiones();
+        tV.calcularPrecio();
         System.out.println("Lavadoras");
-        controlador.registrarLavadora();
-        
+        controlador.verLavadoras();
+        lava.calcularPrecio();
     }
 }

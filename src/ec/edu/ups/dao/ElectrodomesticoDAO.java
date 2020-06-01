@@ -8,6 +8,7 @@ package ec.edu.ups.dao;
 import ec.edu.ups.idao.IElectrodomesticoDAO;
 import ec.edu.ups.modelo.Lavadora;
 import ec.edu.ups.modelo.Television;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -18,7 +19,8 @@ public class ElectrodomesticoDAO implements IElectrodomesticoDAO{
 private List<Television> televisiones;
 private List<Lavadora> lavadoras;
     public ElectrodomesticoDAO() {
-       
+       lavadoras = new ArrayList<>();
+       televisiones = new ArrayList<>();
     }
 
     
